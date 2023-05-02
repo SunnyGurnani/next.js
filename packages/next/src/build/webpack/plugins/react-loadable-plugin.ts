@@ -131,7 +131,7 @@ function buildManifest(
         // next/dynamic so they are loaded by the same technique
 
         // add the id and files to the manifest
-        const id = dev ? key : getModuleId(compilation, module)
+        const id = getModuleId(compilation, module)
         manifest[key] = { id, files: Array.from(files) }
       }
     }
